@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cálculo de Construção</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Cálculo de Custos de Construção</h1>
+        <form id="constructionFrom"></form>
+            <label for="vau">Valor do Vau:</label>
+            <input type="number" id="vau" name="vau" required>
+        <br>
+
+            <label for="concreto_usinado">Utiliza concreto usinado?</label>
+            <select id="concreto_usinado" name="concreto_usinado" required>
+                <option value="s">Sim</option>
+                <option value="n">Não</option>
+            </select>
+        <br>
+            <label for="area_construcao">Área da Construção (m²):</label>
+            <input type="number" id="area_construcao" name="area_construcao" required>
+        <br>
+            <label for="tipo_construcao">Tipo de Construção:</label>
+            <select id="tipo_construcao" name="tipo_construcao" required>
+                <option value="u">Unifamiliar</option>
+                <option value="m">Multifamiliar</option>
+                <option value="c">Comércio</option>
+                <option value="g">Galpão</option>
+                <option value="cp">Casa Popular</option>
+                <option value="chp">Conjunto Habitacional</option>
+            </select>
+        <br>
+            <label for="Estado">Selecione seu estado: </label>
+            <select id="Estado" name="Estado" required>
+                <option value='AC'>ACRE</option>
+                <option value='AL'>ALAGOAS</option>
+                <option value='AM'>AMAZONAS</option>
+                <option value='AP'>AMAPÁ</option>
+                <option value='BA'>BAHIA</option>
+                <option value='CE'>CEARÁ</option>
+                <option value='DF'>DISTRITO FEDERAL</option>
+                <option value='ES'>ESPÍRITO SANTO</option>
+                <option value='GO'>GOIÁS</option>
+                <option value='MA'>MARANHÃO</option>
+                <option value='MG'>MINAS GERAIS</option>
+                <option value='MS'>MATO GROSSO DO SUL</option>
+                <option value='MT'>MATO GROSSO</option>
+                <option value='PA'>PARÁ</option>
+                <option value='PB'>PARAÍBA</option>
+                <option value='PE'>PERNANBUCO</option>
+                <option value='PI'>PIAUÍ</option>
+                <option value='PR'>PARANÁ</option>
+                <option value='RJ'>RIO DE JANEIRO</option>
+                <option value='RN'>RIO GRANDE DO NORTE</option>
+                <option value='RO'>RONDÔNIA</option>
+                <option value='RR'>RORAIMA</option>
+                <option value='RS'>RIO GRANDE DO SUL</option>
+                <option value='SC'>SANTA CATARINA</option>
+                <option value='SE'>SERGIPE</option>
+                <option value='SP'>SÃO PAULO</option>
+                <option value='TO'>TOCANTINS</option>
+            </select>
+        <br>
+            <label for="tipo_material">Tipo de Material de Construção:</label>
+            <select id="tipo_material" name="tipo_material" required>
+                <option value="A">Alvenaria</option>
+                <option value="Mi">Mista</option>
+                <option value="MA">Madeira</option>
+            </select>
+        <br>
+            <label>Aeréa Complementar:</label>
+            <br>
+            <form id="constructionFrom"></form>
+            <label for="valor_area_complementar_coberta">Valor aréa complementar coberta: </label>
+            <input type="number" id="valor_area_complementar_coberta" name="valor_area_complementar_coberta"  step="0.01" value="0.00" required>
+
+            <form id="constructionFrom"></form>
+            <label for="valor_area_complementar_descoberta">Valor aréa complementar descoberta: </label>
+            <input type="number" id="valor_area_complementar_descoberta" name="valor_area_complementar_descoberta" step='0.01' value='0.00' required>
+
+        <br>
+
+            <button id="Calcular" type="button" >Calcular</button>
+        <br>
+            <p>O valor do INSS total é: <span id="resultadoLabel"></span></p>
+            
+            <script src="../codigo/logica.js"></script>
+    </body>
+</html>
